@@ -8,7 +8,7 @@ public class Jogador {
     private String sexo;
     private String time;
 
-    Jogador(String nome, String sobrenome, int idade, String posicao, String sexo, String time) {
+    public Jogador(String nome, String sobrenome, int idade, String posicao, String sexo, String time) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.idade = idade;
@@ -16,4 +16,11 @@ public class Jogador {
         this.sexo = sexo;
         this.time = time;
     }
+
+    public String getNome() { return nome; } //mesmo não usando as funções get no código, o Spring precisa deles para conseguir transformar o objeto em JSON na resposta da API
+    public String getSobrenome() { return sobrenome; }
+    public int getIdade() { return idade; }
+    public String getPosicao() { return posicao; }
+    public String getSexo() { return sexo; }
+    public String getTime() { return time; }
 }
